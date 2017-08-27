@@ -1,0 +1,10 @@
+<h1>My Chating App</h1>
+
+<ul>
+  <li *ngFor="let message of messages | async">
+    {{message.$value }}
+</li>
+</ul>
+
+<input id="messages" type="text" #message placeholder="Enter the message">
+<button (click)="newMessage(message.value)">Post a Message </button>
